@@ -1,0 +1,45 @@
+
+.badge-level {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  user-select: none;
+  min-width: 70px;
+  text-align: center;
+}
+
+.normal {
+  background-color: #FFFFFF;
+  color: #555;
+  border: 1.5px solid #DDD;
+}
+
+.gold {
+  background-color: #FFD700;
+  color: #333;
+  border: 1.5px solid #bfa700;
+}
+
+.silver {
+  background-color: #C9E4CA;
+  color: #2a4d14;
+  border: 1.5px solid #9bc08b;
+}
+
+.bronze {
+  background-color: #CD7F32;
+  color: #fff;
+  border: 1.5px solid #a25f26;
+}
+
+.platinum {
+  background-color: #87BBA2;
+  color: #0f3930;
+  border: 1.5px solid #65947f;
+}
