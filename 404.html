@@ -2,34 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>404 - Página no encontrada</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      text-align: center;
-      padding: 5rem;
-      color: #555;
-    }
-    h1 {
-      font-size: 3.5rem;
-      color: #e74c3c;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.25rem;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <title>Certificado No Verificado ❌</title>
+  <link rel="stylesheet" href="certificados.css" />
 </head>
-<body>
-  <h1>Certificado No Verificado ❌</h1>
-  <h2>404 - Página no encontrada</h2>
-  <p>Lo sentimos, no se valida la información o la página no existe.</p>
-  <p><a href="/">Volver al inicio</a></p>
+<body class="bg-normal p-10 max-w-4xl mx-auto font-sans">
+  <header class="mb-8 text-center">
+    <h1 class="text-3xl font-bold text-red-600">Certificado No Verificado </h1>
+    <p class="text-lg text-gray-600 mt-1">No se valida la información proporcionada.</p>
+  </header>
+
+  <section class="bg-white p-8 rounded shadow text-center">
+    <h2 class="text-2xl font-semibold mb-6">La información del certificado es inválida o no existe.</h2>
+    <p>Por favor verifica el enlace o contacta con el emisor para mayor información.</p>
+    <p class="mt-8"><a href="/" class="text-blue-600 underline font-semibold">Volver al inicio</a></p>
+  </section>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificado PY-001</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../certificados.css" />
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 relative">
+  <!-- Medalla nivel Normal -->
+  <div class="badge-level normal">Normal</div>
+
+  <div class="bg-white p-6 rounded-2xl shadow-xl max-w-xl w-full text-center relative">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4">Certificado No Verificado ❌</h1>
+    
+    <p class="text-lg text-gray-700"><strong>Nombre:</strong> </p>
+    <p class="text-lg text-gray-700"><strong>Curso:</strong> </p>
+    
+    <p class="text-lg text-gray-700">
+      <strong>Fecha de emisión:</strong>
+    </p>
+    
+    <p class="text-sm text-gray-500 mt-3"><strong>ID del certificado:</strong> </p>
+    <!-- Timestamp Unix guardado en un div oculto -->
+    <div id="fecha" data-timestamp="1747785600" style="display:none;"></div>
+
+
+    <div class="mt-4">
+      <a href="../cursos/python-fundamentos-001.html" class="text-sm text-gray-400 hover:text-blue-600">← Ver todos los certificados de este curso</a>
+    </div>
+  </div>
+  <div class="bg-white p-8 rounded shadow text-center">
+    <h2 class="text-2xl font-semibold mb-6">La información del certificado es inválida o no existe.</h2>
+    <p>Por favor verifica el enlace o contacta con el emisor para mayor información.</p>
+    <p class="mt-8"><a href="/" class="text-blue-600 underline font-semibold">Volver al inicio</a></p>
+  </div>
+</body>
+</html>
+
