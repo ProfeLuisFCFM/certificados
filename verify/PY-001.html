@@ -1,53 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificado PY-001</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../certificados.css" />
-</head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 relative">
-  <!-- Medalla nivel Normal -->
-  <div class="badge-level normal">Normal</div>
-
-  <div class="bg-white p-6 rounded-2xl shadow-xl max-w-xl w-full text-center relative">
-    <h1 class="text-2xl font-bold text-gray-800 mb-4">Certificado Verificado</h1>
-    
-    <p class="text-lg text-gray-700"><strong>Nombre:</strong> Claudia Estefania Pacheco Aguirre</p>
-    <p class="text-lg text-gray-700"><strong>Curso:</strong> Programación en Python: Fundamentos, Estructuras y Aplicaciones</p>
-    
-    <p class="text-lg text-gray-700">
-      <strong>Fecha de emisión:</strong> <span id="fecha-humana"></span>
-    </p>
-    
-    <p class="text-sm text-gray-500 mt-3"><strong>ID del certificado:</strong> PY-001</p>
-    <!-- Timestamp Unix guardado en un div oculto -->
-    <div id="fecha" data-timestamp="1747785600" style="display:none;"></div>
-    
-    <a href="../certificados/PY-001.pdf" download class="inline-block mt-6 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-      Descargar certificado PDF
-    </a>
-
-    <div class="mt-8 text-sm text-gray-500">
-      Curso impartido por M.C. Luis Ángel Gutiérrez Rodríguez
-    </div>
-
-    <div class="mt-4">
-      <a href="../cursos/python-fundamentos-001.html" class="text-sm text-gray-400 hover:text-blue-600">← Ver todos los certificados de este curso</a>
-    </div>
-  </div>
-
+  <title>Certificado PY-001 - Claudia Estefania Pacheco Aguirre</title>
+  <link rel="stylesheet" href="certificados.css" />
   <script>
-    const fechaDiv = document.getElementById('fecha');
-    const timestamp = parseInt(fechaDiv.dataset.timestamp, 10) * 1000; // milisegundos
-    const fechaHumana = new Date(timestamp).toLocaleDateString('es-ES', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
+    // Mostrar fecha legible a partir del timestamp Unix
+    document.addEventListener("DOMContentLoaded", () => {
+      const ts = 1747785600; // Timestamp Unix guardado
+      const dateElem = document.getElementById("fecha-emision");
+      const date = new Date(ts * 1000);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      dateElem.textContent = date.toLocaleDateString('es-ES', options);
     });
-    document.getElementById('fecha-humana').textContent = fechaHumana;
   </script>
+</head>
+<body class="bg-normal p-10 max-w-4xl mx-auto font-sans">
+  <header class="mb-8 text-center">
+    <h1 class="text-3xl font-bold text-gray-800">Certificado Verificado ✅</h1>
+    <p class="text-lg text-gray-600 mt-1">Nivel: <span class="medalla-normal">Normal</span></p>
+  </header>
+
+  <section class="bg-white p-8 rounded shadow">
+    <h2 class="text-2xl font-semibold mb-4">Otorgado a:</h2>
+    <p class="text-xl mb-6 font-medium">Claudia Estefania Pacheco Aguirre</p>
+
+    <h2 class="text-2xl font-semibold mb-4">Curso:</h2>
+    <p class="text-xl mb-6">Programación en Python: Fundamentos, Estructuras y Aplicaciones</p>
+
+    <h2 class="text-2xl font-semibold mb-4">Fecha de Emisión:</h2>
+    <p id="fecha-emision" class="text-xl font-medium"></p>
+
+    <h2 class="text-2xl font-semibold mb-4">Archivo PDF:</h2>
+    <p><a href="PY-001.pdf" target="_blank" class="text-blue-600 underline">Ver certificado PDF</a></p>
+  </section>
 </body>
 </html>
